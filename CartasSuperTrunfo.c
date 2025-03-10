@@ -2,12 +2,13 @@
 
 int main(){
 
+    prinf("Novo commit\n");
     //introdução ao jogo
     printf("Desafio Super Trunfo!!\n");
     printf ("\n");
     printf ("Esse é o jogo Super Trunfo\n");
     printf ("Logo abaixo é onde você irá cadastrar sua carta no jogo\n");
-
+    
     printf("\n");
 
     //tutorial de cadastro da carta
