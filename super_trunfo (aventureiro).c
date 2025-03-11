@@ -2,7 +2,6 @@
 
 int main(){
 
-    prinf("Novo commit\n");
     //introdução ao jogo
     printf("Desafio Super Trunfo!!\n");
     printf ("\n");
@@ -19,17 +18,19 @@ int main(){
     printf ("5-O valor da área (km²);\n");
     printf ("6-O PIB da cidade;\n");
     printf("7-E os pontos turísticos;\n");
+    printf("8-Densidade Populacional e PIB per capita são calculados automaticamente\n");
     printf ("\n");
 
     //Dados da carta 1
     char estado[9]; //nome do estado Piauí
     char codigo1[80]; //Código da carta "inicial do estado e numero da carta" A01
     char cidade1[80];//Nome da cidade Teresina
-    int populacao1;// numero da população 86 esta em milhões, ex:coloque 86, ele fica 86 Milhões
+    int populacao1;// numero da população 86000000
     int pontos1; // numero de pontos turísticos da cidade 35
-    float pib1; // pib da cidade 23.8 
+    float pib1; // pib da cidade 230.80 
     float area1;// tamanho da Área em Km² da cidade 139.20
-    
+
+
     printf ("\n");//Apenas pra pular 1 linha
 
     //cadastro da carta 1
@@ -50,9 +51,9 @@ int main(){
     printf ("nome da cidade é: %s\n", cidade1);
 
     //Cadastro da quantidade de população feita pelo usuário
-    printf ("insira a quantidade de habitantes (milhões):\n");
+    printf ("insira a quantidade de habitantes:\n");
     scanf ("%d" , &populacao1);
-    printf ("A quantidade de habitantes é: %d (Milhões)\n", populacao1);
+    printf ("A quantidade de habitantes é: %d\n", populacao1);
 
     //Cadastro do valor da Área feita pelo usuário
     printf("Insira o valor da Área em km²:\n");
@@ -62,7 +63,7 @@ int main(){
     //Cadastro do PIB feito pelo usuário
     printf ("Insira o PIB:\n");
     scanf ("%f", &pib1);
-    printf ("o PIB é: %.1f US$\n", pib1);
+    printf ("o PIB é: %.2f Milhões de reais\n", pib1);
 
     //Cadastro dos pontos turísticos feito pelo usuário
     printf ("Insira a quantidade de pontos turísticos:");
@@ -76,10 +77,17 @@ int main(){
     printf("Estado: %s\n", estado);
     printf("Código da carta: %s\n", codigo1);
     printf("Cidade: %s\n", cidade1);
-    printf("Numero de habitantes: %d (Milhões)\n", populacao1);
+    printf("Numero de habitantes: %d\n", populacao1);
     printf ("Área em Km²: %.2fkm ²\n", area1);
-    printf ("PIB (US$): %.1f US$\n", pib1);
+    printf ("o PIB é: %.2f Milhões de reais\n", pib1);
     printf ("Pontos turísticos: %i\n", pontos1);
+
+    float densidade1 = (float) populacao1 / area1;
+    float percap1 = (float) populacao1 / pib1;
+
+    printf ("Densidade Populacional: %.2f hab/km²\n", densidade1);
+    printf("PIB per Capita: %.2f\n", percap1);
+
     
     printf("\n");// Apenas pra pular 1 linha
 
@@ -90,11 +98,11 @@ int main(){
     //Estado do Piauí
     char codigo2[80];// código A02
     char cidade2[80];//Cidade luísCorreia (junto pois não usarei fgets)
-    int populacao2;//População 30 milhões
+    int populacao2;//População 30000000
     int pontos2;// 30 pontos turísticos
-    float pib2; //PIB 37.9
+    float pib2; //PIB 370.90
     float area2;//107.40 km²
-    
+
     printf("\n");
 
     //Cadastro da carta 2
@@ -116,9 +124,9 @@ int main(){
    printf ("nome da cidade é: %s\n", cidade2);
 
    //Cadastro da quantidade de população feita pelo usuário
-   printf ("insira a quantidade de habitantes (milhões):\n");
+   printf ("insira a quantidade de habitantes:\n");
    scanf ( "%d" , &populacao2);
-   printf ("A quantidade de habitantes é: %d (Milhões)\n", populacao2);
+   printf ("A quantidade de habitantes é: %d\n", populacao2);
 
    //Cadastro do valor da Área feita pelo usuário
    printf("Insira o valor da Área em km²:\n");
@@ -128,7 +136,7 @@ int main(){
    //Cadastro do PIB feito pelo usuário
    printf ("Insira o PIB:\n");
    scanf ("%f", &pib2);
-   printf ("o PIB é: %.1f US$\n", pib2);
+   printf ("o PIB é: %.2f Milhões de reais\n", pib2);
 
    //Cadastro dos pontos turísticos feito pelo usuário
    printf ("Insira a quantidade de pontos turísticos:");
@@ -142,11 +150,17 @@ int main(){
    printf("Estado: %s\n", estado);
    printf("Código da carta: %s\n", codigo2);
    printf("Cidade: %s\n", cidade2);
-   printf("Numero de habitantes: %d (Milhões)\n", populacao2);
+   printf("Numero de habitantes: %d\n", populacao2);
    printf ("Área em Km²: %.2fkm² \n", area2);
-   printf ("PIB (US$): %.1f US$\n", pib2);
+   printf ("PIB: %.2f Milhões de reais\n", pib2);
    printf ("Pontos turísticos: %i\n", pontos2);
-   
+
+   float densidade2 = (float) populacao2 / area2;
+   float percap2 = (float) populacao2 / pib2;
+
+   printf ("Densidade Populacional: %.2f hab/km²\n", densidade2);
+   printf("PIB per Capita: %.2f\n", percap2);
+
    printf("\n");// Apenas pra pular 1 linha
 
    printf("Pronto, você cadastrou suas cartas no jogo!!\n");
