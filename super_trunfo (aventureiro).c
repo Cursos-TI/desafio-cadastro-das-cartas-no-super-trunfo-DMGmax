@@ -82,11 +82,11 @@ int main(){
     printf ("o PIB é: %.2f Milhões de reais\n", pib1);
     printf ("Pontos turísticos: %i\n", pontos1);
 
-    //Calculando a Densidade Populacional e PIB Per Capita
+    //Calculando a Densidade Populacional e PIB Per Capita da Carta 1:
     float densidade1 = (float) populacao1 / area1;
     float percap1 = (float) populacao1 / pib1;
 
-    //Resultado dos Calculos
+    //Resultado dos Calculos da Carta 1:
     printf ("Densidade Populacional: %.2f hab/km²\n", densidade1);
     printf("PIB per Capita: %.2f\n", percap1);
 
@@ -157,9 +157,11 @@ int main(){
    printf ("PIB: %.2f Milhões de reais\n", pib2);
    printf ("Pontos turísticos: %i\n", pontos2);
 
+   //Calculando Densidade Populacional e PIB Per Capita da Carta 2
    float densidade2 = (float) populacao2 / area2;
    float percap2 = (float) populacao2 / pib2;
 
+   //Resultado dos Calculos da Carta 2:
    printf ("Densidade Populacional: %.2f hab/km²\n", densidade2);
    printf("PIB per Capita: %.2f\n", percap2);
 
