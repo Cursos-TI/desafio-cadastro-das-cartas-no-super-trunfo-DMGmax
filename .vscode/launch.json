@@ -1,6 +1,8 @@
 {
     "configurations": [
         
+
+        
         {
             "name": "C/C++: gcc Compilar e depurar o arquivo ativo",
             "type": "cppdbg",
