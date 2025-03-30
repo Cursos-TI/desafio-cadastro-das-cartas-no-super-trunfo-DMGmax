@@ -40,11 +40,11 @@ printf("3. Iniciar jogo\n");
 printf("Escolha uma dessas opções:\n");
 //fazendo a interface do jogo
 int opcao;
-scanf("%d", &opcao);
+scanf("%d", &opcao);// escolha do usuario 
 
 switch (opcao)
 {
-//Dados das cartas   
+//Dados das cartas no switch  
 case 1:
   printf("Carta 1:\n");
   printf("\n");
@@ -73,9 +73,9 @@ break;
   
 //regras das cartas
 case 2:
-   printf("1. Escolha uma Carta do jogo e seus atributos, quanto maior os atributos da carta melhor seu atributo\n");
-   printf("2. Menos a Densidade Populacional, quanto menor a Densidade, melhor é o atributo\n");
-   printf("3. 2A carta com maior vitória de atributos vence\n");
+   printf("1. Escolha um atributo, quanto maior os atributos da carta melhor seu atributo\n");
+   printf("2. Menos a Densidade Demográfica, quanto menor a Densidade, melhor é o atributo\n");
+   printf("3. A carta com maior vitória de atributos vence\n");
     break;
 
 default: 
@@ -92,15 +92,15 @@ case 3:
     printf("4. Pontos Turísticos\n");
     printf("5. Densidade Demográfica\n");
     
-
     printf("\n");
 
+//switch dos atributos
     int atributo;
-    scanf("%d", &atributo);
+    scanf("%d", &atributo);// escolha do usuario
 
     switch (atributo)
     {
-    case 1:
+    case 1://atributo população
     printf("Carta 1: Estado: %s\n", estado1);
     printf("Carta 1: Cidade: %s\n", cidade1);
     printf("Carta 1: População: %lu\n", populacao1);
@@ -109,7 +109,7 @@ case 3:
     printf("Carta 2: Cidade: %s\n", cidade2); 
     printf("Carta 2: População: %lu\n", populacao2);
 
-    if (populacao1 > populacao2) {
+    if (populacao1 > populacao2) {//comparação dos atributos
         printf("Carta 1 venceu!!\n");
         } else if (populacao2 > populacao1) {
         printf("Carta 2 venceu!!\n");
@@ -117,7 +117,7 @@ case 3:
         printf("EMPATE!!\n");    
         }
         break;
-    case 2:    
+    case 2:// atributo Área    
     printf("Carta 1: Estado: %s\n", estado1);
     printf("Carta 1: Cidade: %s\n", cidade1);
     printf("Carta 1: Área: %.2f\n", area1);
@@ -126,7 +126,7 @@ case 3:
     printf("Carta 2: Cidade: %s\n", cidade2); 
     printf("Carta 2: Área: %.2f\n", area2);
 
-    if (area1 > area2) {
+    if (area1 > area2) {//comparação dos atributos
         printf("Carta 1 venceu!!\n");
         } else if (area2 > area1) {
         printf("Carta 2 venceu!!\n");
@@ -135,7 +135,7 @@ case 3:
         }
         break;
 
-    case 3:
+    case 3://Atributo PIB
     printf("Carta 1: Estado: %s\n", estado1);
     printf("Carta 1: Cidade: %s\n", cidade1);
     printf("Carta 1: PIB: %.2f\n", pib1);
@@ -154,7 +154,7 @@ case 3:
 
         break;
      
-    case 4:
+    case 4:// Atributo Pontos Turísticos
     printf("Carta 1: Estado: %s\n", estado1);
     printf("Carta 1: Cidade: %s\n", cidade1);
     printf("Carta 1: Pontos Turísticos: %i\n", pontos1);
@@ -163,7 +163,7 @@ case 3:
     printf("Carta 2: Cidade: %s\n", cidade2); 
     printf("Carta 2: Pontos Turísticos: %i\n", pontos2);
 
-    if (pontos1 > pontos2) {
+    if (pontos1 > pontos2) {//comparação dos atributos
         printf("Carta 1 venceu!!\n");
         } else if (pontos2 > pontos1) {
         printf("Carta 2 venceu!!\n");
@@ -173,7 +173,7 @@ case 3:
 
         break;
     
-    case 5:
+    case 5:// Atributo Densidade Demográfica
     printf("Carta 1: Estado: %s\n", estado1);
     printf("Carta 1: Cidade: %s\n", cidade1);
     printf("Carta 1:Densidade Demográfica: %.2f\n", densidade1);
@@ -182,9 +182,9 @@ case 3:
     printf("Carta 2: Cidade: %s\n", cidade2); 
     printf("Carta 2: Densidade Demográfica: %.2f\n", densidade2);
 
-    if (densidade1 > densidade2) {
+    if (densidade1 < densidade2) {//comparação dos atributos
         printf("Carta 1 venceu!!\n");
-        } else if (densidade2> densidade1) {
+        } else if (densidade2 < densidade1) {
         printf("Carta 2 venceu!!\n");
         } else {
         printf("EMPATE!!\n");    
@@ -193,14 +193,11 @@ case 3:
         break;
 
     default:
-        printf("Opção Inválida\n");    
+        printf("Opção Inválida\n");// caso não coloque uma das opções do menu    
         break;
-    }        
+    } //switch atributo        
  
-
+ }//switch opcoes
 return 0;
-
- }
-
 
 }
